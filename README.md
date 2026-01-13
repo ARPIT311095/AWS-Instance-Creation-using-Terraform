@@ -5,22 +5,22 @@
 This project demonstrates how to provision an AWS EC2 instance using Terraform.
 Terraform is used as an Infrastructure as Code (IaC) tool to automate the creation of cloud resources in a repeatable and reliable way.
 
-🧱 Architecture
+<h1>NOTE:-</h1>
+1) if in the Instance AMI is change then the terraform is first do terminate the first instance then create a new instance
+<h1>🧱 Architecture</h1>
 
-AWS Provider
+1) AWS Provider
+2) EC2 Instance (t3.micro)
+3) Region: us-east-1
 
-EC2 Instance (t3.micro)
-
-Region: us-east-1
-
-📂 Project Structure
+<h1>📂 Project Structure</h1>
 terraform-ec2-project/
 │
 ├── main.tf
 ├── README.md
 └── .gitignore
 
-⚙️ Prerequisites
+<h1>⚙️ Prerequisites</h1>
 
 <h1>Before running this project, make sure you have:</h1>
 
@@ -31,7 +31,7 @@ terraform-ec2-project/
 
 <h1>Configure AWS credentials:</h1>
 
-aslo check the main.tf file
+<h1>aslo check the main.tf file</h1>
 
 aws configure
 
@@ -50,43 +50,34 @@ resource "aws_instance" "mywebserver" {
 }
 
 <h1>🚀 Steps to Create EC2 Instance Using Terraform</h1>
-1️⃣ Initialize Terraform
-terraform init
-
-2️⃣ Validate Configuration
-terraform validate
-
-3️⃣ Preview the Plan
-terraform plan
-
-4️⃣ Apply Configuration
-terraform apply
-
-
+1️⃣ Initialize Terraform<br>
+terraform init<br>
+2️⃣ Validate Configuration<br>
+terraform validate<br>
+3️⃣ Preview the Plan<br>
+terraform plan<br>
+4️⃣ Apply Configuration<br>
+terraform apply<br>
 Type yes when prompted.
 
-✅ Output
+<h1>✅ Output</h1>
 
 After successful execution:
-
 An EC2 instance is created in AWS
-
 Instance is visible in AWS EC2 Dashboard
 
 Infrastructure is managed by Terraform state
 
 <h1>🧹 Destroy Resources (Optional)</h1>
-
 To delete the EC2 instance:
 
-terraform destroy
+1) terraform destroy
 
 <h1>🔐 Security Best Practices</h1>
 
 AWS credentials are not hardcoded
 
 .terraform/ and terraform.tfstate are ignored using .gitignore
-
 No sensitive data pushed to GitHub
 
 <h1>📌 Why Terraform?</h1>
